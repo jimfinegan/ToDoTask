@@ -1,0 +1,58 @@
+﻿@model ToDoTasks.Models.UIToDoTask
+
+@{
+    ViewBag.Title = "CreateTask";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Task</h2>
+
+
+
+@using (Html.BeginForm("CreateNewUser", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Todo Task</legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+            <div id="login-div" style="border: 1px solid red">
+                @ViewBag.Message
+            </div>
+        }
+        <table>
+            <tr>
+                <td>@Html.LabelFor(model => model.TaskDescription )</td>
+                <td>@Html.TextBoxFor(model => model.TaskDescription)</td>
+                <td>@Html.ValidationMessageFor(model => model.TaskDescription)</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.CheckedDone)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(model => model.CheckedDone)
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+}
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

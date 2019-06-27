@@ -1,0 +1,16 @@
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ToDoTaskBusinessLogic.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ToDoTaskBusinessLogic.pdb
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.Common.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.OrmLite.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.ServiceInterface.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.Text.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ToDoTasksDataLayer.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ToDoTasksDataLayer.pdb
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.Common.xml
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\obj\Debug\ToDoTaskBusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\obj\Debug\ToDoTaskBusinessLogic.dll
+C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTaskBusinessLogic\obj\Debug\ToDoTaskBusinessLogic.pdb

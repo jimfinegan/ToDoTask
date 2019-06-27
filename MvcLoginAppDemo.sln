@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoTasks", "MvcLoginAppDemo\ToDoTasks.csproj", "{EF20C210-B9E9-4E48-AB42-AA721E5CC0A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoTaskBusinessLogic", "ToDoTaskBusinessLogic\ToDoTaskBusinessLogic.csproj", "{B773D37A-71BE-4330-A754-F81E74390456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoTasksDataLayer", "ToDoTasksDataLayer\ToDoTasksDataLayer.csproj", "{CDC00962-75BC-491E-9296-1E74381A06F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF20C210-B9E9-4E48-AB42-AA721E5CC0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF20C210-B9E9-4E48-AB42-AA721E5CC0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF20C210-B9E9-4E48-AB42-AA721E5CC0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF20C210-B9E9-4E48-AB42-AA721E5CC0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B773D37A-71BE-4330-A754-F81E74390456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B773D37A-71BE-4330-A754-F81E74390456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B773D37A-71BE-4330-A754-F81E74390456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B773D37A-71BE-4330-A754-F81E74390456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC00962-75BC-491E-9296-1E74381A06F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC00962-75BC-491E-9296-1E74381A06F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC00962-75BC-491E-9296-1E74381A06F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC00962-75BC-491E-9296-1E74381A06F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

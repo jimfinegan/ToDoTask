@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ToDoTasks.Models.UIToDoTask>
+    @{
+        ViewBag.Title = "UserDashBoard";
+    }
+
+    <fieldset>
+        <legend>User DashBoard</legend>
+
+        @if (Session["UserName"] != null)
+        {
+            <text>
+                Welcome @Session["UserName"].ToString();
+            </text>
+        }
+        else
+        {
+            Response.Redirect("~/Login/Index");
+        }
+    </fieldset>
+
+
+<h1>View</h1>
+
+<p>
+
+    @Html.ActionLink("Create New Task", "CreateTask")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDoTaskId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckedDone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToDoTaskId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaskDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastUpdated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckedDone)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateUser", new { id=item.ToDoTaskId }) 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
