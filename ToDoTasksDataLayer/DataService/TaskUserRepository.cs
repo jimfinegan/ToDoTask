@@ -13,7 +13,7 @@ namespace ToDoTasksDataLayer.DataService
     {
         private IRepository<TaskUsers, int> iRepsoitory;
 
-        public TaskUserRepository(IRepository<TaskUsers, int> iRepsoitory) : base()
+        public TaskUserRepository(IRepository<TaskUsers, int> iRepsoitory) 
         {
             this.iRepsoitory = iRepsoitory;
         }

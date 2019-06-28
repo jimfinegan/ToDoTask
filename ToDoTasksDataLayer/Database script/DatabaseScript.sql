@@ -175,5 +175,5 @@ CREATE TABLE [dbo].[TaskUsers](
 ) ON [PRIMARY]
 GO
 
-
+insert into  TaskUsers (UserName, UserPassword) values ('test', 'pwd123')
 

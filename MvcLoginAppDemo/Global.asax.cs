@@ -18,6 +18,7 @@ namespace ToDoTasks
         {
             AreaRegistration.RegisterAllAreas();
 
+            IocConfigurator.ConfigureDependencyInjection();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

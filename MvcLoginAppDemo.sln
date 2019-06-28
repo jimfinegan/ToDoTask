@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoTaskBusinessLogic", "To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoTasksDataLayer", "ToDoTasksDataLayer\ToDoTasksDataLayer.csproj", "{CDC00962-75BC-491E-9296-1E74381A06F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoTasksTest", "ToDoTasksDataLayerTest\ToDoTasksTest.csproj", "{EE422EC3-2AB1-4180-957A-E1288896F4EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CDC00962-75BC-491E-9296-1E74381A06F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDC00962-75BC-491E-9296-1E74381A06F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDC00962-75BC-491E-9296-1E74381A06F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE422EC3-2AB1-4180-957A-E1288896F4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE422EC3-2AB1-4180-957A-E1288896F4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE422EC3-2AB1-4180-957A-E1288896F4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE422EC3-2AB1-4180-957A-E1288896F4EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

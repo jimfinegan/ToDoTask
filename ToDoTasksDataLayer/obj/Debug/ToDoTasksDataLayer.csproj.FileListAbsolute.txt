@@ -12,3 +12,17 @@ C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTasksDataLayer
 C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.dll
 C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.pdb
 C:\Users\jimfinegan\Downloads\MvcLoginAppDemo\MvcLoginAppDemo\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.csprojResolveAssemblyReference.cache
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ToDoTasksDataLayer.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ToDoTasksDataLayer.pdb
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Common.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Interfaces.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.OrmLite.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.ServiceInterface.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Text.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.dll
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Common.xml
+C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Interfaces.xml
+C:\Dell\MVC\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.dll
+C:\Dell\MVC\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.pdb
+C:\Dell\MVC\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.csprojResolveAssemblyReference.cache

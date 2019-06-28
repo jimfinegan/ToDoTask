@@ -15,23 +15,22 @@ namespace ToDoTasks.Facade
     public class ToDoTasksFacade
     {
 
-        public int GetUserIdLogon(string userName, string password)
+        private IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> resporitoryToDoTasks;
+
+        public ToDoTasksFacade()
         {
-            IRepository<TaskUsers, int> reporitory = new RepositoryOrmlite<TaskUsers, int>();
-
-            User user = new User(reporitory);
-
-            int userId = user.LoginUser(userName, password);
-
-            return userId;
         }
 
+        public ToDoTasksFacade(IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> resporitoryToDoTasks)
+        {
+            this.resporitoryToDoTasks = resporitoryToDoTasks;
+        }
+        
         public List<Models.UIToDoTask> GetAllTasksForUser(int userId)
         {
-            IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> resporitory = new RepositoryOrmlite<ToDoTasksDataLayer.Entities.ToDoTasks, int>();
-            IList<ToDoTasksDataLayer.Entities.ToDoTasks> tasks = new List<ToDoTasksDataLayer.Entities.ToDoTasks>();
+             IList<ToDoTasksDataLayer.Entities.ToDoTasks> tasks = new List<ToDoTasksDataLayer.Entities.ToDoTasks>();
 
-            ToDoTask toDoTask = new ToDoTask(resporitory);
+            ToDoTask toDoTask = new ToDoTask(this.resporitoryToDoTasks);
             tasks = toDoTask.GetAllTasksForUser (userId);
 
             List<Models.UIToDoTask> uiToDoTasks = new List<Models.UIToDoTask>();
@@ -75,9 +74,7 @@ namespace ToDoTasks.Facade
         }
         public void Save(Models.UIToDoTask uiTask)
         {
-            IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> resporitory = new RepositoryOrmlite<ToDoTasksDataLayer.Entities.ToDoTasks, int>();
-
-            ToDoTask toDoTask = new ToDoTask(resporitory);
+            ToDoTask toDoTask = new ToDoTask(this.resporitoryToDoTasks);
 
             ToDoTasksDataLayer.Entities.ToDoTasks task = new ToDoTasksDataLayer.Entities.ToDoTasks
             {

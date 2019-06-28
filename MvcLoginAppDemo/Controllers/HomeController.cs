@@ -4,11 +4,21 @@ using System.Linq;
 using System.Web.Mvc;
 using ToDoTasks.Facade;
 using ToDoTasks.Models;
+using ToDoTasksDataLayer.Repository;
 
 namespace ToDoTasks.Controllers
 {
     public class HomeController : Controller
     {
+        private IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> resporitoryToDoTasks;
+        private IRepository<ToDoTasksDataLayer.Entities.TaskUsers, int> resporitoryUsers;
+
+        public HomeController(IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> repoTasks, IRepository<ToDoTasksDataLayer.Entities.TaskUsers, int> repoUsers)
+        {
+            this.resporitoryToDoTasks = repoTasks;
+            this.resporitoryUsers = repoUsers;
+        }
+
         public ActionResult Login()
         {
             return View();
@@ -16,11 +26,11 @@ namespace ToDoTasks.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Models.TaskUser objUser)
+        public ActionResult Login(TaskUser objUser)
         {
             if (ModelState.IsValid)
             {
-                objUser.UserId = new UserFacade().GetUserIdLogon(objUser.UserName, objUser.UserPassword);
+                objUser.UserId = new UserFacade(this.resporitoryUsers).GetUserIdLogon(objUser.UserName, objUser.UserPassword);
                 if (objUser.UserId > 0)
                 {
                     objUser.UserName = objUser.UserName;
@@ -44,7 +54,7 @@ namespace ToDoTasks.Controllers
         [HttpPost]
         public ActionResult CreateNewUser(UIToDoTask task)
         {
-            ToDoTasksFacade facade = new ToDoTasksFacade();
+            ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
             task.TaskUserId = Convert.ToInt32(Session["UserID"]);
             task.LastUpdated = System.DateTime.Now;
 
@@ -52,7 +62,7 @@ namespace ToDoTasks.Controllers
             if (Session["UserID"] != null)
             {
                 int userId = Convert.ToInt32(Session["UserID"]);
-                facade = new ToDoTasksFacade();
+                facade = new ToDoTasksFacade(resporitoryToDoTasks);
                 List<UIToDoTask> tasks = facade.GetAllTasksForUser(userId);
                 return View("UserDashBoard", tasks);
             }
@@ -65,7 +75,7 @@ namespace ToDoTasks.Controllers
         [HttpPost]
         public ActionResult SaveEditedTask(UIToDoTask task)
         {
-            ToDoTasksFacade facade = new ToDoTasksFacade();
+            ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
             task.TaskUserId = Convert.ToInt32(Session["UserID"]);
             task.LastUpdated = System.DateTime.Now;
 
@@ -74,7 +84,7 @@ namespace ToDoTasks.Controllers
             if (Session["UserID"] != null)
             {
                 int userId = Convert.ToInt32(Session["UserID"]);
-                facade = new ToDoTasksFacade();
+                facade = new ToDoTasksFacade(resporitoryToDoTasks);
                 List<UIToDoTask> tasks = facade.GetAllTasksForUser(userId);
                 return View("UserDashBoard", tasks);
             }
@@ -86,7 +96,7 @@ namespace ToDoTasks.Controllers
 
         public ActionResult UpdateUser(int id)
         {
-            ToDoTasksFacade facade = new ToDoTasksFacade();
+            ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
             UIToDoTask task = facade.GetTask(id);
 
             if (task != null)
@@ -106,7 +116,7 @@ namespace ToDoTasks.Controllers
             {
                 int userId = Convert.ToInt32(Session["UserID"]);
 
-                ToDoTasksFacade facade = new ToDoTasksFacade();
+                ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
                 List<UIToDoTask> tasks = facade.GetAllTasksForUser  (userId);
 
                 return View(tasks);

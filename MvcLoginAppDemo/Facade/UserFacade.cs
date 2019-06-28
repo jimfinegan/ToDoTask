@@ -13,11 +13,16 @@ namespace ToDoTasks.Facade
 {
     public class UserFacade
     {
+        private IRepository<TaskUsers, int> resporitoryUsers;
+
+        public UserFacade(IRepository<TaskUsers, int> resporitoryUsers)
+        {
+            this.resporitoryUsers = resporitoryUsers;
+        }
+
         public int GetUserIdLogon(string userName, string password)
         {
-            IRepository<TaskUsers, int> reporitory = new RepositoryOrmlite<TaskUsers, int>();
-
-            User user = new User(reporitory);
+            User user = new User(resporitoryUsers);
 
             int userId = user.LoginUser(userName, password);
 
