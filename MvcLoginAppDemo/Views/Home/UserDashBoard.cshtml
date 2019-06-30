@@ -3,6 +3,10 @@
         ViewBag.Title = "UserDashBoard";
     }
 
+
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true)
+
     <fieldset>
         <legend>User DashBoard</legend>
 
@@ -57,7 +61,10 @@
                     @Html.DisplayFor(modelItem => item.CheckedDone)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "UpdateUser", new { id=item.ToDoTaskId }) 
+                    @Html.ActionLink("Edit", "UpdateTask", new { id=item.ToDoTaskId }) 
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteTask", new { id = item.ToDoTaskId })
                 </td>
             </tr>
         }

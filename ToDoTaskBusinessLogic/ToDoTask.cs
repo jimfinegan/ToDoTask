@@ -48,5 +48,11 @@ namespace ToDoTaskBusinessLogic
             ToDoTaskRepository toDoTask = new ToDoTaskRepository(this.iRepository);
             toDoTask.UpdateTask (existingTask);
         }
+
+        public void Del(ToDoTask toDoTask)
+        {
+            ToDoTaskRepository toDoTaskRepo = new ToDoTaskRepository(this.iRepository);
+            toDoTaskRepo.Del (toDoTask);
+        }
     }
 }

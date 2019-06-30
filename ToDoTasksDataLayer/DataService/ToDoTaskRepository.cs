@@ -39,5 +39,10 @@ namespace ToDoTasksDataLayer.DataService
         {
             this.iRepsoitory.Save(newTask);
         }
+
+        public void Del(ToDoTasks toDoTask)
+        {
+            this.iRepsoitory.Remove(toDoTask);
+        }
     }
 }

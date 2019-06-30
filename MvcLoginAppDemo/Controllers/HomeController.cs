@@ -94,7 +94,7 @@ namespace ToDoTasks.Controllers
             }
         }
 
-        public ActionResult UpdateUser(int id)
+        public ActionResult UpdateTask(int id)
         {
             ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
             UIToDoTask task = facade.GetTask(id);
@@ -110,6 +110,22 @@ namespace ToDoTasks.Controllers
             }
         }
 
+        public ActionResult DeleteTask(int id)
+        {
+            ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
+            UIToDoTask task = facade.DelTask(id);
+
+            if (task != null)
+            {
+                return View("UpdateTask", task);
+            }
+            else
+            {
+                return UserDashBoard();
+
+            }
+        }
+        
         public ActionResult UserDashBoard()
         {
             if (Session["UserID"] != null)

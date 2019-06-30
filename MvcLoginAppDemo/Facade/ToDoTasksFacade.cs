@@ -53,10 +53,9 @@ namespace ToDoTasks.Facade
 
         public UIToDoTask GetTask (int taskId)
         {
-            IRepository<ToDoTasksDataLayer.Entities.ToDoTasks, int> resporitory = new RepositoryOrmlite<ToDoTasksDataLayer.Entities.ToDoTasks, int>();
             ToDoTasksDataLayer.Entities.ToDoTasks task = new ToDoTasksDataLayer.Entities.ToDoTasks();
 
-            ToDoTask toDoTask = new ToDoTask(resporitory);
+            ToDoTask toDoTask = new ToDoTask(this.resporitoryToDoTasks);
             ToDoTasksDataLayer.Entities.ToDoTasks entityTask = toDoTask.GetTasks(taskId);
 
             
@@ -92,6 +91,15 @@ namespace ToDoTasks.Facade
             {
                 toDoTask.UpdateTask(task);
             }
+        }
+
+        public void DelTask(int id)
+        {
+            ToDoTask toDoTask = new ToDoTask(this.resporitoryToDoTasks);
+            ToDoTasksDataLayer.Entities.ToDoTasks entityTask = toDoTask.GetTasks(id);
+        
+                toDoTask.Del(toDoTask);
+        
         }
     }
 }
