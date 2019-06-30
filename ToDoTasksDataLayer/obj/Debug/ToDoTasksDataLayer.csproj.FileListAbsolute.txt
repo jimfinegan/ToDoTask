@@ -25,3 +25,4 @@ C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Common.xml
 C:\Dell\MVC\ToDoTasksDataLayer\bin\Debug\ServiceStack.Interfaces.xml
 C:\Dell\MVC\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.dll
 C:\Dell\MVC\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.pdb
+C:\Dell\MVC\ToDoTasksDataLayer\obj\Debug\ToDoTasksDataLayer.csprojResolveAssemblyReference.cache

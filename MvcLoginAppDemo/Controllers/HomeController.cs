@@ -113,17 +113,10 @@ namespace ToDoTasks.Controllers
         public ActionResult DeleteTask(int id)
         {
             ToDoTasksFacade facade = new ToDoTasksFacade(resporitoryToDoTasks);
-            UIToDoTask task = facade.DelTask(id);
-
-            if (task != null)
-            {
-                return View("UpdateTask", task);
-            }
-            else
-            {
-                return UserDashBoard();
-
-            }
+            facade.DelTask(id);
+            
+            return UserDashBoard();
+            
         }
         
         public ActionResult UserDashBoard()

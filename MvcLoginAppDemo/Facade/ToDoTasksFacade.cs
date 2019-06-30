@@ -79,7 +79,7 @@ namespace ToDoTasks.Facade
             {
                 CheckedDone = uiTask.CheckedDone,
                 LastUpdated = uiTask.LastUpdated,
-                TaskDescription = uiTask.TaskDescription,
+                TaskDescription = HttpUtility.HtmlEncode(uiTask.TaskDescription),
                 TaskUserId = uiTask.TaskUserId,
                 ToDoTaskId = uiTask.ToDoTaskId 
             };
@@ -98,7 +98,7 @@ namespace ToDoTasks.Facade
             ToDoTask toDoTask = new ToDoTask(this.resporitoryToDoTasks);
             ToDoTasksDataLayer.Entities.ToDoTasks entityTask = toDoTask.GetTasks(id);
         
-                toDoTask.Del(toDoTask);
+                toDoTask.Del(entityTask);
         
         }
     }
