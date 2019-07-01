@@ -3,6 +3,9 @@ using System.Web.Optimization;
 
 namespace ToDoTasks
 {
+    /// <summary>
+    /// Bundles the config
+    /// </summary>
     public class BundleConfig
     {
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725

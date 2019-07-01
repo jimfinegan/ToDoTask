@@ -11,8 +11,14 @@ using ToDoTasksDataLayer.Entities;
 
 namespace ToDoTasks
 {
+    /// <summary>
+    /// Sets up the inversion of control to promote dependency injection.
+    /// </summary>
     public class IocConfigurator
     {
+        /// <summary>
+        /// using Autofac to resolve dependencies
+        /// </summary>
         public static void ConfigureDependencyInjection()
         {
             var builder = new ContainerBuilder();

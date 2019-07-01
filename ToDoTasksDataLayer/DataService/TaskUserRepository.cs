@@ -9,6 +9,9 @@ using ToDoTasksDataLayer.Repository;
 
 namespace ToDoTasksDataLayer.DataService
 {
+    /// <summary>
+    /// Database interaction of the user repositary
+    /// </summary>
     public class TaskUserRepository 
     {
         private IRepository<TaskUsers, int> iRepsoitory;
@@ -17,6 +20,13 @@ namespace ToDoTasksDataLayer.DataService
         {
             this.iRepsoitory = iRepsoitory;
         }
+
+        /// <summary>
+        /// Gets the user object from the user name and password
+        /// </summary>
+        /// <param name="userName">Username</param>
+        /// <param name="password">Password</param>
+        /// <returns>The user object return</returns>
         public TaskUsers GetUserByUserNameAndPassword(string userName, string password)
         {
             TaskUsers taskUsers = new TaskUsers();
